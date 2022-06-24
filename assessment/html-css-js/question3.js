@@ -29,11 +29,3 @@ inputVal.addEventListener('keyup',function (e){
 inputVal.addEventListener('keydown',function () {
     clearTimeout(timer);
 });
-
-/* function inputChange(){
-    console.log(inputVal);
-} */
-
-
-
-//onkeyup="setTimeout(() => {inputChange();}, 500);"
