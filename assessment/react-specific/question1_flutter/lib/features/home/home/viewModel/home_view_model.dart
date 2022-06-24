@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import 'package:mobx_codegen/mobx_codegen.dart';
 
 import '../../../../core/base/model/base_view_model.dart';
 import '../service/home_service.dart';
