@@ -1,7 +1,31 @@
 /* just to be able to see the div, this is your starting point*/
 /* You can create your own classess, animations etc*/
 #to-be-animated {
-  width: 200px;
-  height: 200px;
+  width: 20%;
+  height: 40%;
   background-color: red;
+
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  transition: all 1s ease-in-out;
+ 
 }
+
+.to-be-animated-rotate {
+  transform: rotate(360deg);
+}
+
+.to-be-animated-position {
+  animation: positionChange 1s linear;
+}
+
+@keyframes positionChange {
+  0%   {top:50%;}
+  50%  {top:0%;}
+  50%  {top:0%;}
+}
+
+
