@@ -1,6 +1,7 @@
 // ASSESSMENT:
 // Fill inside of the optimizeFunction function!
 
+
 function doExpensiveTask(input) {
   const result = 2 * input;
   console.log("Doing expensive task...:", result);
