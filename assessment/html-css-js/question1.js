@@ -32,31 +32,37 @@ const organizations = [
   }
 ];
 
-const positionsWithOrgNames = [];
-
-
-function positionsWithOrgNamesFunc(){
-  for (let positionsIndex = 0; positionsIndex < positions.length; positionsIndex++) { 
-    for (let organizationsIndex = 0; organizationsIndex < organizations.length; organizationsIndex++) {
-      if(positions[positionsIndex].orgId == organizations[organizationsIndex].id){
-        positionsWithOrgNames.push({'name': positions[positionsIndex].name, 'orgName': organizations[organizationsIndex].name});
-      }
-    }
-  }
-  console.log(positionsWithOrgNames);
-}
-
 // ASSESSMENT:
 // Using array methods, create a new array of objects named 'positionsWithOrgNames'
 // We want to put position name and its organization name together, using the orgId relationship
 // Bonus point if you think about the time complexity, a fast solution, these arrays can be huge (thousands of elements maybe!)
 // SOLUTION:
 
+const positionsWithOrgNames = [];
 
 
+function positionsWithOrgNamesFunc(){
+  positions.forEach((positionsItems, positionsIndex) =>{
+    organizations.forEach((organizationsItems, organizationsIndex)=> {
+      if(positions[positionsIndex].orgId == organizations[organizationsIndex].id){
+        positionsWithOrgNames.push({'name' : positions[positionsIndex].name, 'orgName' : organizations[organizationsIndex].name});
+      }
+    });   
+  });
+
+  /* for (let positionsIndex = 0; positionsIndex < positions.length; positionsIndex++) { 
+    for (let organizationsIndex = 0; organizationsIndex < organizations.length; organizationsIndex++) {
+      if(positions[positionsIndex].orgId == organizations[organizationsIndex].id){
+        positionsWithOrgNames.push({'name': positions[positionsIndex].name, 'orgName': organizations[organizationsIndex].name});
+      }
+    }
+  } */
+  
+  console.log(positionsWithOrgNames);
+}
 
 // so that when we log the final result
-//console.log(positionsWithOrgNames)
+  //console.log(positionsWithOrgNames)
 /* Should print:
 
 [
