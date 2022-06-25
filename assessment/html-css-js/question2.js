@@ -1,21 +1,28 @@
 // ASSESSMENT:
 // Fill inside of the optimizeFunction function!
 
-//Bu kod bloğunu anlayamadığımdan, anladığım kadarı ile çıktıların gösterildiği gibi olacağı şeklinde yazdım.
+//Bu kod bloğunu tam anlayamadığımdan, anladığım kadarı ile çıktıların, gösterildiği gibi sonuç vereceği şekilde yazdım.
+
 var valList = [];
+// Girişler valList'e kaydedilir, her girişte girilen sayı listede var mı diye kontrol edilir, eğer yoksa kaydedilir ardından doExpensiveTask fonksiyonuna verilir, 
+// eğer varsa sameInputTask fonksiyonuna verilir.
+
 function optimizeFunction() {
   // You shouldn't need to edit anywhere else
   // Do your work inside this function
   // SOLUTION:
 
+  //Girilen değer int de olsa string olarak alındığı için int'e dönüştürülüyor.
   var q2Val = parseInt(document.getElementById('q2_input').value);
-  //true or false result
+
+  //true or false - Liste içinde girilen değer aranıyor.
   var result = valList.includes(q2Val);
 
   if(!result){
     valList.push(q2Val);      
     doExpensiveTask(q2Val);
-    if(valList.length == 2){ //Eski girdiyi unutmalı kısmını anlayamadığımdan böyle bir yöntem yazdım, eğer kayıt 2 ye ulaştı ise sil tekrar başla
+    if(valList.length == 2){ 
+      //Eski girdiyi unutmalı kısmını anlayamadığımdan böyle bir yöntem yazdım, eğer kayıt 2 ye ulaştı ise sil tekrar başla
       valList = [];
     }
   }else{
@@ -62,7 +69,8 @@ function optimizeFunction2() {
   if(!result){
     valList2.push(q2Val);      
     doAnotherExpensiveTask(q2Val);
-    if(valList2.length == 2){ //Eski girdiyi unutmalı kısmını anlayamadığımdan böyle bir yöntem yazdım, eğer kayıt 2 ye ulaştı ise sil tekrar başla
+    if(valList2.length == 2){ 
+      //Eski girdiyi unutmalı kısmını anlayamadığımdan böyle bir yöntem yazdım, eğer kayıt 2 ye ulaştı ise sil tekrar başla
       valList2 = [];
     }
   }else{
