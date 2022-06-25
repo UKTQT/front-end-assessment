@@ -11,7 +11,9 @@
 // Don't forget to add your css and javascript to index.html file
 
 
-// Hepsi tamam, fakat upDown fonksiyonunda div hareketini bitirdikten sonra 1 kere tıklayınca çalışmıyor, 2 kere tıklamak gerekli, muhtemelen sıfırlama gerekli, zaman bakımından üstüne düşmeyip diğerlerine geçmiş bulunmaktayım.
+// Hepsi tamam, fakat upDown fonksiyonunda div hareketini bitirdikten sonra 1 kere tıklayınca çalışmıyor, 
+//2 kere tıklamak gerekli, muhtemelen sıfırlama gerekli, zaman bakımından üstüne düşmeyip diğerlerine geçmiş bulunmaktayım.
+
 const animatedDiv = document.querySelector('#to-be-animated');
 
 function rotate360() {
